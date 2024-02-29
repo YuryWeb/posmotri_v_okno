@@ -16,6 +16,7 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  padding: 133px 30px 0;
 }
 
 h1,
@@ -36,3 +37,136 @@ ul,
 ol {
   list-style: none;
 }
+
+
+.content {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 711px 1fr;
+  column-gap: 30px;
+
+}
+
+
+/* СЕКЦИЯ result */
+
+.result__video-container {
+  width: 711px;
+  height: 386px;
+  margin: 78px 0 16px;
+  
+}
+
+.result__video {
+  width: 100%;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+}
+
+.search-form__fieldset {
+  align-self: end;
+}
+
+.search-form__fieldset-title {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 21.6px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.search-form__label-text {
+  color: rgb(255, 255, 255, 0.7);
+}
+
+
+
+
+
+.button {
+  align-self: end;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  text-align: center;
+  color:#fff;
+  background-color: transparent;
+  border: 1px solid currentColor;
+  padding: 6px 74px;
+}
+
+.button:active {
+  background-color: #545050; /* Проверить, почему не работает */
+}
+
+.button:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+
+/* END --- СЕКЦИЯ result */
+
+
+/* СЕКЦИЯ content__details */
+
+.title {
+  font-family: Oswald, sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 70.5px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  margin-bottom: 34px;
+}
+
+/* END --- СЕКЦИЯ content__details */
+
+
+/* template карточек */
+
+.content__video-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 30px;
+
+}
+.content__video-card-title {
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.content__video-card-description {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+  color: #fff;
+}
+
+.content__video-card-thumbnail {
+  width: 100%;
+}
+
+
+/* END --- template карточек */
