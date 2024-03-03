@@ -41,17 +41,21 @@ ol {
 .content {
   /* display: flex; */
   display: grid;
-  grid-template-columns: 711px 1fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   height: 535px;
-  overflow: hidden;
+  /* overflow: hidden; */
   /*border: 1px solid #f00f0f;  вспомогательная рамка */
 }
 
 /* СЕКЦИЯ result */
 
-.result__video-container {
+.result {
   width: 711px;
+}
+
+.result__video-container {
+  width: 100%;
   height: 386px;
   margin: 78px 0 16px;
 }
@@ -148,6 +152,12 @@ ol {
   color: rgb(255, 255, 255, 0.7);
 }
 
+.search-form__label-text:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  cursor: pointer;
+}
+
 /* СЕКЦИЯ result - END --- ФОРМЫ */
 
 .button {
@@ -188,6 +198,10 @@ ol {
 
 /* СЕКЦИЯ content__details */
 
+.content__details {
+  width: 100%;
+}
+
 .title {
   font-family: Oswald, sans-serif;
   font-size: 75px;
@@ -203,7 +217,14 @@ ol {
 }
 
 .content__list {
+  width: 100%;
   margin-bottom: 34px;
+  height: 298px;
+  overflow-y: auto;
+}
+
+.content__list::-webkit-scrollbar {
+  display: none;
 }
 
 /* END --- СЕКЦИЯ content__details */
@@ -212,12 +233,19 @@ ol {
 /* template карточек */
 
 .cards-list-item-template {
-
+  width: 399px;
+  box-sizing: border-box;
 }
 
 .content__list-item {
+  width: 100%;
   margin-bottom: 30px;
+  padding: 2px;
 }
+
+.content__list-item:active {
+  background-color: #545050;
+} 
 
 .content__card-link {
   text-decoration: none;
@@ -240,13 +268,7 @@ ol {
 }
 
 .content__video-card-description-container {
-  height: 107px;
-  padding: 2px;
-  overflow: hidden;
-}
-
-.content__video-card-description-container:active {
-  background-color: #545050;
+  margin-bottom: 4px;
 }
 
 .content__video-card-title {
@@ -268,7 +290,9 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  height: 107px;
+  display: block;
+  width: 194px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
