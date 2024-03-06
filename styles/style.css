@@ -39,13 +39,11 @@ ol {
 }
 
 .content {
-  /* display: flex; */
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 535px;
   column-gap: 30px;
-  /* height: 535px; */
-  /* overflow: hidden; */
-  /*border: 1px solid #f00f0f;  вспомогательная рамка */
+  /* border: 1px solid #f00f0f;  вспомогательная рамка */
 }
 
 /* СЕКЦИЯ result */
@@ -63,7 +61,7 @@ ol {
 
 .result__video {
   width: 100%;
-  height: 100%;
+  height: 386px;
   object-fit: cover;
   object-position: center;
 }
@@ -73,12 +71,11 @@ ol {
 .search-form {
   display: grid;
   grid-template-columns: 225px 1fr 1fr; 
-  /* grid-template-columns: repeat(3, 1fr); */
   column-gap: 40px;
 }
 
 .search-form__fieldset {
-  align-self: end;
+  align-self: start;
   border: none;
 }
 
@@ -89,7 +86,7 @@ ol {
   font-weight: 400;
   line-height: 21.6px;
   color: #fff;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .search-form__textfield {
@@ -97,13 +94,12 @@ ol {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 21.6px;
+  line-height: 24px;
   color: rgb(255, 255, 255, 0.7);
-  /* background-color: #1B1919; */
   background-color: transparent;
   width: 100%;
   margin: 0;
-  padding: 2.5px 0;
+  padding: 0;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   border-right: 0;
@@ -131,13 +127,21 @@ ol {
   align-items: center;
   /* width: fit-content; */
   cursor: pointer;
-  
+}
+
+.search-form__label:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 /* класс реального чекбокса */
 
 .search-form__checkbox { 
-
+/* Непонятно, зачем данный класс, если стандартный чекбокс скрывается */
 }
 
 /* END -- класс реального чекбокса */
@@ -170,14 +174,12 @@ ol {
   width: 15px;
   height: 15px;
   background-color: #fff;
-  /* border: 1px solid #db0808; вспомогательный контур внутренней заливки */
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   margin: auto;
-  /* transform: translate(-50%, -50%); */
 }
 
 .search-form__label-text {
@@ -199,20 +201,21 @@ ol {
 /* СЕКЦИЯ result - END --- ФОРМЫ */
 
 .button {
+  display: inline-block;
   align-self: end;
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
-  line-height: 21.6px;
+  line-height: 20px;
   text-align: center;
   color:#fff;
   background-color: transparent;
   border: 1px solid currentColor;
-  padding: 6px 74px;
+  padding: 6px 73px;
 }
 
 .more-button {
-  width: 100%;
+  width: 397px;
 }
 
 .button:hover {
@@ -226,6 +229,10 @@ ol {
   background-color: #545050;
   text-decoration: none;
   cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
 }
 
 .button:focus-visible {
@@ -248,7 +255,7 @@ ol {
   line-height: 70.5px;
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 26px;
+  margin-bottom: 21px;
 }
 
 .content__accent {
@@ -268,7 +275,6 @@ ol {
 
 /* END --- СЕКЦИЯ content__details */
 
-
 /* template карточек */
 
 .cards-list-item-template {
@@ -278,7 +284,7 @@ ol {
 
 .content__list-item {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   padding: 2px;
 }
 
@@ -287,7 +293,7 @@ ol {
 } 
 
 .content__card-link {
-  display: inline-block;
+  display: block;
   text-decoration: none;
 }
 
@@ -301,18 +307,20 @@ ol {
   text-decoration: none;
 }
 
+.content__card-link:focus {
+  outline: none;
+}
+
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
 .content__video-card {
-  width: 399px;
+  width: 100%;
   display: grid;
   /* grid-template-columns: 1fr 1fr; */
-  /* grid-template-columns: 1fr 194px; */
-  grid-template-columns: minmax(min-content, 1fr) 194px;
-  /* box-sizing: border-box; */
+  grid-template-columns: 1fr 194px;
   grid-template-rows: 107px;
 }
 
@@ -350,22 +358,5 @@ ol {
   object-fit: cover;
   object-position: center;
 }
-
-.error-template {
-  border-color: #545050;
-}
-
-.error {
-
-}
-
-.error__title {
-  font-family: Oswald, sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 33px;
-  color: #fff;
-}
-
 
 /* END --- template карточек */
