@@ -18,8 +18,6 @@ html {
   background-color: #1b1919;
   display: flex;
   align-items: center;
-  /* padding: 133px 30px 0; */
-  /* padding: auto 30px; */
 }
 
 h1,
@@ -46,7 +44,6 @@ ol {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 535px;
   column-gap: 30px;
-  /* border: 1px solid #f00f0f;  вспомогательная рамка */
 }
 
 /* СЕКЦИЯ result */
@@ -128,7 +125,6 @@ ol {
   justify-content: space-between;
   column-gap: 5px;
   align-items: center;
-  /* width: fit-content; */
   cursor: pointer;
 }
 
@@ -169,7 +165,6 @@ ol {
   height: 19px;
   border: 1px solid #fff;
   vertical-align: sub;
-  /* vertical-align: middle; */
   position: relative;
 }
 
@@ -324,7 +319,6 @@ ol {
 .content__video-card {
   width: 100%;
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
   grid-template-columns: 1fr 194px;
   grid-template-rows: 107px;
 }
