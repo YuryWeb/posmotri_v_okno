@@ -17,8 +17,8 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   display: flex;
+  justify-content: center;
   align-items: center;
-  /* justify-content: center; */
 }
 
 h1,
@@ -41,6 +41,8 @@ ol {
 }
 
 .content {
+  width: 1140px;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 535px;
@@ -71,7 +73,7 @@ ol {
 
 .search-form {
   display: grid;
-  grid-template-columns: 225px 1fr 1fr; 
+  grid-template-columns: 225px 1fr 1fr;
   column-gap: 40px;
 }
 
@@ -85,9 +87,9 @@ ol {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 21.6px;
+  line-height: 1.2;
   color: #fff;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 .search-form__textfield {
@@ -135,6 +137,11 @@ ol {
   cursor: pointer;
 }
 
+.search-form__label:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
 .search-form__label:focus {
   outline: none;
 }
@@ -142,12 +149,6 @@ ol {
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 1px;
-}
-
-/* класс реального чекбокса */
-
-.search-form__checkbox { 
-/* Непонятно, зачем данный класс, если стандартный чекбокс скрывается */
 }
 
 /* END -- класс реального чекбокса */
@@ -193,31 +194,33 @@ ol {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 21.6px;
+  line-height: 1.2;
   color: rgb(255, 255, 255, 0.7);
-  appearance: none;
 }
 
-.search-form__label-text:hover {
+/* .search-form__label-text:hover {
   text-decoration: underline;
   text-underline-position: under;
   cursor: pointer;
-}
+} */
 
 /* СЕКЦИЯ result - END --- ФОРМЫ */
 
 .button {
   display: inline-block;
+  min-width: 194px;
   align-self: end;
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 1.2;
   text-align: center;
   color:#fff;
   background-color: transparent;
   border: 1px solid currentColor;
-  padding: 6px 73px;
+  padding: 6px 0;
+  cursor: pointer;
+  appearance: none;
 }
 
 .more-button {
@@ -228,13 +231,11 @@ ol {
   background-color: transparent;
   text-decoration: underline;
   text-underline-position: under;
-  cursor: pointer;
 }
 
 .button:active {
   background-color: #545050;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .button:focus {
@@ -276,28 +277,16 @@ ol {
   position: relative;
 }
 
-/* .content__list::-webkit-scrollbar {
-  display: none;
-} */
-
 /* END --- СЕКЦИЯ content__details */
 
 /* template карточек */
 
-/* .cards-list-item-template {
-  width: 399px;
-  box-sizing: border-box;
-} */
-
 .content__list-item {
   width: 100%;
-  margin-bottom: 27px;
-  padding: 2px;
+  height: 107px;
+  margin-bottom: 30px;
+  /* padding: 2px; */
 }
-
-/* .content__list-item:active {
-  background-color: #545050;
-}  */
 
 .content__card-link_current {
   background-color: #545050;
@@ -315,7 +304,6 @@ ol {
 }
 
 .content__card-link:active {
-
   background-color: #545050;
 }
 
@@ -333,15 +321,14 @@ ol {
   display: grid;
   grid-template-columns: 1fr 194px;
   grid-template-rows: 107px;
+  padding: 2px 0 2px 2px;
 }
 
 .content__video-card-description-container {
   display: block;
   width: 100%;
   align-self: stretch;
-  margin-bottom: 4px;
-  padding-top: 2px;
-  padding-left: 2px;
+  /* margin-bottom: 4px; */
 }
 
 .content__video-card-title {
@@ -360,12 +347,14 @@ ol {
   font-weight: 400;
   line-height: 16.2px;
   color: #fff;
+  margin-bottom: 4px;
 }
 
 .content__video-card-thumbnail {
   display: block;
   max-width: 194px;
-  height: 103px;
+  /* height: 103px; */
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
