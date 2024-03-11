@@ -137,7 +137,7 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label:hover {
+.search-form__label:hover:has(input[type="checkbox"]) {
   text-decoration: underline;
   text-underline-position: under;
 }
@@ -176,7 +176,22 @@ ol {
   position: relative;
 }
 
+/* Исправить по замечанию - чтобы чекбокс включался и выключался
+
 .search-form__pseudo-checkbox:active::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+} */
+
+input[type='checkbox']:checked + span { /* из теории - не работает, просто меняется квадрат */
   content: '';
   width: 15px;
   height: 15px;
